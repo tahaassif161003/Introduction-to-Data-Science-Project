@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VerifiAI | Account</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="digital-grid"></div>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <nav class="glass-nav">
+    <a href="index.html" class="logo">Verifi<span class="neon-text">AI.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="detector.html">Detector</a></li>
+      <li><a href="account.html" class="active">Account</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-container" style="display:flex; justify-content:center; padding-top: 3rem;">
+
+    <div class="glass-panel" style="width: 100%; max-width: 900px; padding: 2rem;">
+      <div id="login-view" style="max-width: 400px; margin: 0 auto; text-align: center;">
+        <h2 class="section-title">SYSTEM <span>LOGIN</span></h2>
+        <form onsubmit="handleLogin(event)">
+          <input type="email" placeholder="Terminal ID (Email)" required>
+          <input type="password" placeholder="Passcode" required>
+          <button type="submit" class="cyber-btn" style="margin-top: 1rem;">AUTHENTICATE</button>
+        </form>
+      </div>
+
+      <div id="dashboard-view" style="display: none;">
+
+        <div class="profile-header">
+          <img src="https://via.placeholder.com/150" alt="Profile" class="profile-avatar">
+
+          <div class="profile-info">
+            <div class="profile-username">
+              SysAdmin_01 <button class="cyber-btn" style="padding: 5px 15px; font-size: 0.8rem; width: auto; margin:0;"
+                onclick="handleLogout()">LOGOUT</button>
+            </div>
+
+            <div class="profile-stats">
+              <div class="stat-item"><span>142</span> Scans</div>
+              <div class="stat-item"><span>98%</span> Accuracy</div>
+              <div class="stat-item"><span>6</span> Data Nodes</div>
+            </div>
+
+            <div class="profile-bio">
+              <p><strong>VerifiAI System Administrator</strong></p>
+              <p>Decoding the matrix of modern media. Superior University Lahore 🎓</p>
+              <a href="#">verifiai-systems.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-tabs">
+          <button class="profile-tab active" onclick="switchProfileTab('scans')">▦ SCANS</button>
+          <button class="profile-tab" onclick="switchProfileTab('saved')">★ SAVED</button>
+          <button class="profile-tab" onclick="switchProfileTab('settings')">⚙ SETTINGS</button>
+        </div>
+
+        <div id="tab-scans" class="profile-tab-content grid-view">
+          <div class="grid-item">
+            <h3>Election Rumor</h3>
+            <span class="status status-fake">FAKE (99%)</span>
+          </div>
+          <div class="grid-item">
+            <h3>Economic Report Q3</h3>
+            <span class="status status-real">VERIFIED (94%)</span>
+          </div>
+          <div class="grid-item">
+            <h3>Deepfake Video Link</h3>
+            <span class="status status-fake">FAKE (87%)</span>
+          </div>
+          <div class="grid-item">
+            <h3>Tech CEO Quote</h3>
+            <span class="status status-real">VERIFIED (91%)</span>
+          </div>
+          <div class="grid-item">
+            <h3>Health Cure Claim</h3>
+            <span class="status status-fake">FAKE (95%)</span>
+          </div>
+          <div class="grid-item">
+            <h3>Climate Data 2024</h3>
+            <span class="status status-real">VERIFIED (88%)</span>
+          </div>
+        </div>
+
+        <div id="tab-saved" class="profile-tab-content grid-view" style="display: none;">
+          <div class="grid-item" style="border: 1px dashed var(--text-muted); background: transparent;">
+            <h3 style="color: var(--text-muted);">No saved scans yet</h3>
+          </div>
+        </div>
+
+        <div id="tab-settings" class="profile-tab-content"
+          style="display: none; display: flex; flex-direction: column; gap: 1rem;">
+          <button class="cyber-btn" onclick="alert('Connecting to LLM Node...')">MANAGE GEMINI API KEYS</button>
+          <button class="cyber-btn" onclick="alert('Exporting advanced_analysis.db...')">EXPORT DATABASE LOGS</button>
+          <button class="cyber-btn" style="border-color: var(--neon-magenta); color: var(--neon-magenta);"
+            onclick="alert('Account deletion requires Master Node approval.')">DELETE ACCOUNT</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

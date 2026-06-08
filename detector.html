@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VerifiAI | Scanner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="digital-grid"></div>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <nav class="glass-nav">
+    <a href="index.html" class="logo">Verifi<span class="neon-text">AI.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="detector.html">Detector</a></li>
+      <li><a href="account.html">Account</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-container" style="display:flex; justify-content:center; padding-top: 5rem;">
+    <div class="glass-panel" style="width: 100%; max-width: 800px;">
+      <h2 class="section-title" style="font-size: 2rem;">NEURAL <span>SCANNER</span></h2>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('text')">01 // TEXT</button>
+        <button class="tab-btn" onclick="switchTab('link')">02 // URL</button>
+        <button class="tab-btn" onclick="switchTab('image')">03 // VISION</button>
+      </div>
+
+      <div class="input-group active" id="input-text">
+        <textarea placeholder="Paste article or claim for NLP analysis..." rows="6"></textarea>
+      </div>
+      <div class="input-group" id="input-link">
+        <input type="url" placeholder="Enter target URL: https://...">
+      </div>
+      <div class="input-group" id="input-image">
+        <input type="file" accept="image/*"
+          style="padding: 3rem; text-align: center; border: 2px dashed var(--glass-border);">
+      </div>
+
+      <button class="cyber-btn" onclick="runDetector()">INITIATE SCAN</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
